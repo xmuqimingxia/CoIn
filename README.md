@@ -19,14 +19,25 @@ You could optionally add extra command line parameters `--batch_size ${BATCH_SIZ
 
 * Train with multiple GPUs or multiple machines
 ```shell script
-sh scripts/dist_train.sh ${NUM_GPUS} --cfg_file ${CONFIG_FILE}
-
-# or 
-
-sh scripts/slurm_train.sh ${PARTITION} ${JOB_NAME} ${NUM_GPUS} --cfg_file ${CONFIG_FILE}
+sh scripts/dist_train.sh ${NUM_GPUS} tools/cfgs/kitti_models/CoIn.yaml
 ```
 
 * Train with a single GPU:
 ```shell script
-python train.py --cfg_file ${CONFIG_FILE}
+python train.py tools/cfgs/kitti_models/CoIn.yaml
 ```
+
+### Test a model
+
+* To test with multiple GPUs:
+```shell script
+sh scripts/dist_test.sh ${NUM_GPUS} \
+    tools/cfgs/kitti_models/CoIn.yaml --batch_size ${BATCH_SIZE}
+```
+
+* To test all the saved checkpoints of a specific training setting and draw the performance curve on the Tensorboard, add the `--eval_all` argument: 
+```shell script
+python test.py tools/cfgs/kitti_models/CoIn.yaml --batch_size ${BATCH_SIZE} --eval_all
+```
+## Acknowledgement
+[]
