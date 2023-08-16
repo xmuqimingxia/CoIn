@@ -4,3 +4,6 @@ This is a official code release of CoIn (Contrastive Instance Feature Mining for
 
 # Detection Framework
 ![image](https://github.com/xmuqimingxia/CoIn/assets/108978798/e4921388-908d-409d-ab5f-b87924938a7d)
+
+# Getting Started
+
