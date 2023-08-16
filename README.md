@@ -41,3 +41,17 @@ python test.py tools/cfgs/kitti_models/CoIn.yaml --batch_size ${BATCH_SIZE} --ev
 ```
 ## Acknowledgement
 [OpenPCDET](https://github.com/open-mmlab/OpenPCDet)
+
+
+## Citation 
+If you find this project useful in your research, please consider cite:
+
+
+```
+@inproceedings{CoIn2023,
+    title={CoIn: Contrastive Instance Feature Mining for Outdoor 3D Object Detection with Very Limited Annotations},
+    author={Xia, Qiming and Deng, Jinhao and Wen, Chenglu and Wu, Hai and Shi, Shaoshuai and Li, Xin and Wang, Cheng},
+    booktitle = {ICCV},
+    year={2023}
+}
+```
