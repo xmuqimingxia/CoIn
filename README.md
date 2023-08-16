@@ -7,4 +7,5 @@ This is a official code release of CoIn (Contrastive Instance Feature Mining for
 ![image](https://github.com/xmuqimingxia/CoIn/assets/108978798/787379ac-4a0f-41ab-9e04-e7c8c0fd61b2)
 
 # Getting Started
+coming soon
 
