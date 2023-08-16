@@ -40,4 +40,4 @@ sh scripts/dist_test.sh ${NUM_GPUS} \
 python test.py tools/cfgs/kitti_models/CoIn.yaml --batch_size ${BATCH_SIZE} --eval_all
 ```
 ## Acknowledgement
-[]
+[OpenPCDET](https://github.com/open-mmlab/OpenPCDet)
