@@ -261,7 +261,7 @@ class CoInHead(nn.Module):
         loss += LP_loss
         tb_dict['LP_loss_head'] = LP_loss.item()
 
-        x_contrast_loss = self.MCloss(feat, orignal_heatmap)
+        x_contrast_loss = 0.5 * self.MCloss(feat, orignal_heatmap)
         loss += x_contrast_loss
         tb_dict['x_contrast_loss'] = x_contrast_loss.item()
 
