@@ -258,7 +258,7 @@ class CoInHead(nn.Module):
 
         #In the subsequent experiments, the weights of the loss function were further adjusted.        
         LP_loss = self.LPloss(feat, pred_dicts[0]['hm'], orignal_heatmap)
-        loss += LP_loss
+        loss += 0.7 * LP_loss
         tb_dict['LP_loss_head'] = LP_loss.item()
 
         x_contrast_loss = 0.5 * self.MCloss(feat, orignal_heatmap)
