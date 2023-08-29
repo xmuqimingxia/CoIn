@@ -203,6 +203,16 @@ class RoIHeadTemplate(nn.Module):
         rcnn_cls_labels = forward_ret_dict['rcnn_cls_labels'].view(-1)
         if loss_cfgs.CLS_LOSS == 'BinaryCrossEntropy':
             rcnn_cls_flat = rcnn_cls.view(-1)
+
+            #CoIn
+            mask_valid = rcnn_cls_flat>0.5
+            mask_valid_gt = rcnn_cls_labels<=0
+
+            mask = mask_valid * mask_valid_gt
+
+            #rcnn_cls_labels[mask] = 1
+
+            
             batch_loss_cls = F.binary_cross_entropy(torch.sigmoid(rcnn_cls_flat), rcnn_cls_labels.float(), reduction='none')
             cls_valid_mask = (rcnn_cls_labels >= 0).float()
             rcnn_loss_cls = (batch_loss_cls * cls_valid_mask).sum() / torch.clamp(cls_valid_mask.sum(), min=1.0)
