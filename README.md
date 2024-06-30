@@ -8,9 +8,8 @@ This is a official code release of CoIn (Contrastive Instance Feature Mining for
 
 ## Getting Started
 ### Prepare dataset
-coming soon
 
-We temporarily provide a kitti_ Info_train.pkl file is convenient for running code. https://drive.google.com/file/d/1342-YP-w8xbC2PDGcaoSASaJkjHKN89u/view?usp=sharing
+We provide a kitti_ Info_train.pkl file is convenient for running code. https://drive.google.com/file/d/1342-YP-w8xbC2PDGcaoSASaJkjHKN89u/view?usp=sharing
 
 
 ## Training & Testing
